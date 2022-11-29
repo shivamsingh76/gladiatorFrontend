@@ -1,0 +1,15 @@
+<p>admin-login works!</p>
+
+<div>
+    <form [formGroup]="adminLoginForm" (ngSubmit)="onSubmit()">
+      <label for="email">Admin Email: </label>
+      <input id="email" type="text" formControlName="email" /> <br />
+  
+      <label for="password">Admin Password: </label>
+      <input id="password" type="text" formControlName="password" /> <br />
+  
+    
+      <button type="submit">Login</button> <br />
+  
+    </form>
+  </div>
