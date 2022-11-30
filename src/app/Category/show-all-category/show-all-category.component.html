@@ -1,0 +1,21 @@
+<p>show-all-category works!</p>
+
+<div class="container">
+    <div class="table-responsive">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let c of catAllCat"> //
+            <td>{{ c.categoryId }}</td>
+            <td>{{ c.categoryName }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
