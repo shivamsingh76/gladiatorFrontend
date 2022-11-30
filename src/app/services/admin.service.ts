@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Login } from '../Login/Login';
 import { Admin } from '../Admin/Admin';
 import { Observable } from 'rxjs/internal/Observable';
+import { Retailer } from '../Retailer/Retailer';
 
 @Injectable({
   providedIn: 'root'
@@ -15,8 +16,13 @@ export class AdminService {
   constructor(private httpService:HttpClient) { }
 
   public doAdminLogin(login:Login):Observable<any> {
-    
-
+  
     return this.httpService.get<Admin>(this.baseUrl+'/login/'+login.email+"/"+login.password);
   }
+
+  public registerRetailer(retailer: Retailer):Observable<any> {
+    const headers = { 'content-type': 'application/json'} ;
+    return this.httpService.post(this.baseUrl+'/retailer',retailer, {'headers': headers});
+  }
+
 }
