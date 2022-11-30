@@ -1,0 +1,27 @@
+<p>user-register works!</p>
+
+
+<div>
+    <form [formGroup]="userLoginForm" (ngSubmit)="onSubmit()">
+      <label for="userId">User Id: </label>
+      <input id="userId" type="text" formControlName="userId" /> <br />
+
+      <label for="userName">User Name: </label>
+      <input id="userName" type="text" formControlName="userName" /> <br />
+
+      <label for="userMobileNumber">User Mobile Number: </label>
+      <input id="userMobileNumber" type="text" formControlName="userMobileNumber" /> <br />
+
+      <label for="userEmail">User Email: </label>
+      <input id="userEmail" type="text" formControlName="userEmail" /> <br />
+
+      <label for="password">Password: </label>
+      <input id="password" type="text" formControlName="password" /> <br />
+
+      <label for="Address">User Address: </label>
+      <input id="Address" type="text" formControlName="Address" /> <br />
+
+      <button type="submit">Register</button> <br />
+
+    </form>
+  </div>

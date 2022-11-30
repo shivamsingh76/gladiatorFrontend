@@ -2,6 +2,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { UserLoginComponent } from './Login/user-login/user-login.component';
+import { UserRegisterComponent } from './Register/user-register/user-register.component';
 import { HttpClientModule } from '@angular/common/http'; // add this import
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +20,8 @@ import { AddProductComponent } from './Admin/add-product/add-product.component';
 @NgModule({
   declarations: [
     AppComponent,
+    UserLoginComponent,
+    UserRegisterComponent,
     RetailerloginComponent,
     RetailerComponent,
     OrderComponent,
