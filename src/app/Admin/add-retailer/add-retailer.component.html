@@ -1,0 +1,20 @@
+<p>add-retailer works!</p>
+<div>
+    <form [formGroup]="addRetailerForm" (ngSubmit)="onSubmit()">
+      <label for="retailerName">Retailer Name: </label>
+      <input id="retailerName" type="text" formControlName="retailerName" /> <br />
+  
+      <label for="retailerEmail">Retailer Email: </label>
+      <input id="retailerEmail" type="text" formControlName="retailerEmail" /> <br />
+
+      <label for="retailerMobile">Admin Mobile: </label>
+      <input id="retailerMobile" type="text" formControlName="retailerMobile" /> <br />
+
+      <label for="retailerPassword">Admin Password: </label>
+      <input id="retailerPassword" type="text" formControlName="retailerPassword" /> <br />
+  
+    
+      <button type="submit">Add Retailer</button> <br />
+  
+    </form>
+  </div>
