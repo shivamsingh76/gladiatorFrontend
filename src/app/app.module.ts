@@ -2,6 +2,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { ShowAllCategoryComponent } from './Category/show-all-category/show-all-category.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,6 +23,7 @@ import { AddProductComponent } from './Admin/add-product/add-product.component';
 @NgModule({
   declarations: [
     AppComponent,
+    ShowAllCategoryComponent,
     UserLoginComponent,
     UserRegisterComponent,
     RetailerloginComponent,
@@ -34,9 +38,6 @@ import { AddProductComponent } from './Admin/add-product/add-product.component';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
-    HttpClientModule,
-    FormsModule,
     ReactiveFormsModule
     
     ],
