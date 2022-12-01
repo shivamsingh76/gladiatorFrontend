@@ -18,9 +18,7 @@ export class UserLoginComponent implements OnInit {
     });
   }
 
-
   onSubmit() {
     this.userSer.doAdminLogin(this.userLoginForm.value).subscribe((data) => {console.log(data)});
-
   }
 }

@@ -1,15 +1,8 @@
-import { HttpClientModule } from '@angular/common/http';
+
 import { NgModule } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
 import { ShowAllCategoryComponent } from './Category/show-all-category/show-all-category.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { UserLoginComponent } from './Login/user-login/user-login.component';
-import { UserRegisterComponent } from './Register/user-register/user-register.component';
 import { HttpClientModule } from '@angular/common/http'; // add this import
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,6 +12,11 @@ import { RetailerComponent } from './Retailer/retailer.component';
 import { AdminLoginComponent } from './Login/admin-login/admin-login.component';
 import { AddRetailerComponent } from './Admin/add-retailer/add-retailer.component';
 import { AddProductComponent } from './Admin/add-product/add-product.component';
+import { UserLoginComponent } from './Login/user-login/user-login.component';
+import { UserRegisterComponent } from './Register/user-register/user-register.component';
+import { ShowAllOrdersComponent } from './User/show-all-orders/show-all-orders.component';
+import { HomeComponent } from './home/home.component';
+
 
 @NgModule({
   declarations: [
@@ -31,7 +29,10 @@ import { AddProductComponent } from './Admin/add-product/add-product.component';
     OrderComponent,
     AdminLoginComponent,
     AddRetailerComponent,
-    AddProductComponent
+    AddProductComponent,
+    ShowAllOrdersComponent,
+    HomeComponent
+
   ],
   imports: [
     BrowserModule,
@@ -39,7 +40,7 @@ import { AddProductComponent } from './Admin/add-product/add-product.component';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule
-    
+
     ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,37 @@
+<p>show-all-orders works!</p>
+
+<div>
+  <form [formGroup]="userLoginForm" (ngSubmit)="onSubmit()">
+    <label for="userId">User id: </label>
+    <input id="userId" type="text" formControlName="userId" /> <br />
+
+    <button type="submit">show all orders</button> <br />
+
+  </form>
+</div>
+
+
+<div class="container">
+  <div class="table-responsive">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>  orderId </th>
+          <th>  productOrderQty </th>
+          <th>  productOrderPrice </th>
+          <!-- <th>  productId </th> -->
+          <!-- <th>  userId  </th> -->
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let c of categoryList"> //
+          <td>{{ c.orderId }}</td>
+          <td>{{ c.productOrderQty }}</td>
+          <td>{{ c.productOrderPrice }}</td>
+          <!-- <td>{{ c.productId }}</td> -->
+          <!-- <td>{{ c.userId }}</td> -->
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
