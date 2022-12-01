@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { login } from '../Login/Login';
+
 import { Retailer } from '../Retailer/Retailer';
+import { Login } from '../Login/Login';
 
 
 
@@ -19,7 +20,7 @@ export class RetailerService {
   constructor(private httpService:HttpClient) { }
 
 
-  public doRetailerLogin(login:login):Observable<any> {
+  public doRetailerLogin(login:Login):Observable<any> {
     
     return this.httpService.get<Retailer>(this.baseUrl+'/login/'+login.email+"/"+login.password);
 

@@ -1,4 +1,12 @@
-<p>show-all-category works!</p>
+<p>get-prod-bycat works!</p>
+<div >
+    <input type="text" [(ngModel)]="prodByCat" size="10"/>
+    <button (click)="onSearch()">Search</button>   
+    <div *ngIf="notFound">Product not found</div>
+</div>
+
+
+<h3 class="p-3 text-center">Employee Record : </h3>
 
 <div class="container">
     <div class="table-responsive">
@@ -10,7 +18,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let c of categoryList"> //
+          <tr *ngFor="let c of prodByCat"> 
             <td>{{ c.categoryId }}</td>
             <td>{{ c.categoryName }}</td>
           </tr>

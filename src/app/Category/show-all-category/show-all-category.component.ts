@@ -23,13 +23,11 @@ export class ShowAllCategoryComponent implements OnInit {
       categoryName: ['', Validators.required],
     });
 
-    this.getAllCat()
-    this.getProductByCat()
+    this.getAllCat();
+    
 
   }
-  public getProductByCat() {
-    this.catSer.getAllCategory().subscribe((data: Category[]) => (this.categoryList = data));
-  }
+  
   public getAllCat() {
     this.catSer.getAllCategory().subscribe((data: Category[]) => (this.categoryList = data));
   }
