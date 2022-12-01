@@ -1,0 +1,32 @@
+<p>showallproducts works!</p>
+<div class="container">
+    <div class = "table-responsive">
+        <table class = "table table-stripes">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Img</th>
+                    <th>Desc</th>
+                    <th>Price</th>
+                    <th>Brand</th>
+                    <th>Qty</th>
+                    <th>cId</th>
+                    <th>rId</th>
+                </tr>
+            </thead>
+                <tr *ngFor="let p of proList">
+                    <td>{{p.productId}}</td>
+                    <td>{{p.productName}}</td>
+                    <td>{{p.productImage}}</td>
+                    <td>{{p.productDesc}}</td>
+                    <td>{{p.productPrice}}</td>
+                    <td>{{p.productBrand}}</td>
+                    <td>{{p.productQty}}</td>
+                    <td>{{p.categoryId}}</td>
+                    <td>{{p.retailerId}}</td>
+
+                </tr>
+        </table>
+    </div>
+</div>

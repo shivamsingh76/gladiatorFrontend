@@ -1,9 +1,3 @@
-import { HttpClientModule } from '@angular/common/http';
-import { NgModule } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { BrowserModule } from '@angular/platform-browser';
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
 import { ShowAllCategoryComponent } from './Category/show-all-category/show-all-category.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
@@ -23,6 +17,22 @@ import { AddProductComponent } from './Admin/add-product/add-product.component';
 @NgModule({
   declarations: [
     AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    
+    ShowallproductsComponent,
+    ProductbynameComponent
+  ],
+  imports: [
+    BrowserModule,
+
+    AppRoutingModule,
+
+    FormsModule,
+
+    ReactiveFormsModule,
+
+    HttpClientModule
     ShowAllCategoryComponent,
     UserLoginComponent,
     UserRegisterComponent,
@@ -33,15 +43,8 @@ import { AddProductComponent } from './Admin/add-product/add-product.component';
     AddRetailerComponent,
     AddProductComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    HttpClientModule,
-    ReactiveFormsModule
-    
-    ],
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
