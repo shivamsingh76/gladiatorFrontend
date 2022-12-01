@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+
 import { ShowAllCategoryComponent } from './Category/show-all-category/show-all-category.component';
 import { AppRoutingModule } from './app-routing.module';
 import { UserLoginComponent } from './Login/user-login/user-login.component';
@@ -17,6 +18,22 @@ import { AddRetailerComponent } from './Admin/add-retailer/add-retailer.componen
 @NgModule({
   declarations: [
     AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    
+    ShowallproductsComponent,
+    ProductbynameComponent
+  ],
+  imports: [
+    BrowserModule,
+
+    AppRoutingModule,
+
+    FormsModule,
+
+    ReactiveFormsModule,
+
+    HttpClientModule
     ShowAllCategoryComponent,
     UserLoginComponent,
     UserRegisterComponent,
@@ -27,15 +44,8 @@ import { AddRetailerComponent } from './Admin/add-retailer/add-retailer.componen
     AddRetailerComponent,
     AddProductComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    HttpClientModule,
-    ReactiveFormsModule
-    
-    ],
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
