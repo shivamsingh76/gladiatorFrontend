@@ -5,13 +5,13 @@ import { Retailer } from '../Retailer/Retailer';
 import { Login } from '../Login/Login';
 import { Product } from '../Product/Product';
 
-
-
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class RetailerService {
+  baseUrl: string = 'http://localhost:8282/retailers';
 
+  constructor(private httpService: HttpClient) {}
 
   baseUrl:string="http://localhost:8282/retailers";
   getCreateUpdateRequest: any;
@@ -39,4 +39,19 @@ export class RetailerService {
   }
 
 
+  public doRetailerLogin(login: Login): Observable<any> {
+    return this.httpService.get<Retailer>(
+      this.baseUrl + '/login/' + login.email + '/' + login.password
+    );
+  }
+
+  // public getMyProduct(){
+
+  //   return this.httpService.get<Product[]>(this.baseUrl+'/myproducts/'+retailer.retailerId);
+
+  // }
+
+  // public createUpdateRequest(){
+  //   return this.httpService.post<boolean>(this.baseUrl+'/updaterequest/'+product.productId);
+  // }
 }

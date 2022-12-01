@@ -1,1 +1,39 @@
 <p>add-product works!</p>
+<div>
+    <form [formGroup]="addProductForm" (ngSubmit)="onSubmit()">
+      <label for="productName">Product Name: </label>
+      <input id="productName" type="text" formControlName="productName" /> <br />
+  
+      <label for="productImage">Product Image: </label>
+      <input id="productImage" type="text" placeholder="URL" formControlName="productImage" /> <br />
+
+      <label for="productDesc">Product Description: </label>
+      <input id="productDesc" type="text" formControlName="productDesc" /> <br />
+
+      <label for="productPrice">Product Price: </label>
+      <input id="productPrice" type="number" formControlName="productPrice" /> <br />
+
+      <label for="productBrand">Product Brand: </label>
+      <input id="productBrand" type="text" formControlName="productBrand" /> <br />
+
+      <label for="productQty">Product Quantity: </label>
+      <input id="productQty" type="number" formControlName="productQty" /> <br />
+
+      <label for="categoryId">Category: </label>
+      <select id="categoryId" type="number" formControlName="categoryId">
+        <option *ngFor="let category of categoryList" value={{category.categoryId}}>
+          {{category.categoryName}}
+        </option>   
+      </select><br/>
+
+      <label for="retailerId"> Retailer: </label>
+      <select id="retailerId" type="number" formControlName="retailerId">
+        <option *ngFor="let retailer of retailerList" value={{retailer.retailerId}}>
+          {{retailer.retailerName}}
+        </option>   
+      </select> <br />
+    
+      <button type="submit">Add Product</button> <br />
+  
+    </form>
+  </div>

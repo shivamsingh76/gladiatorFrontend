@@ -6,22 +6,26 @@ import { register } from '../Register/register';
 import { Login } from '../Login/Login';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class UserService {
-  baseUrl:string="http://localhost:8282/users";
-  constructor(private httpService:HttpClient) { }
+  baseUrl: string = 'http://localhost:8282/users';
+  constructor(private httpService: HttpClient) {}
 
-
-  public doAdminLogin(login:Login):Observable<any> {
-    return this.httpService.get<User>(this.baseUrl+'/login/'+login.email+"/"+login.password);
+  public doAdminLogin(login: Login): Observable<any> {
+    return this.httpService.get<User>(
+      this.baseUrl + '/login/' + login.email + '/' + login.password
+    );
   }
 
-  public addProd(emp:register):Observable<any>
-  {
-    const headers = {'content-type': 'application/json'}
-    console.log("inside service"+emp);
-    return this.httpService.post(this.baseUrl+'/adduser/',JSON.stringify(emp),{'headers':headers});
+  public addProd(emp: register): Observable<any> {
+    const headers = { 'content-type': 'application/json' };
+    console.log('inside service' + emp);
+    return this.httpService.post(
+      this.baseUrl + '/adduser/',
+      JSON.stringify(emp),
+      { headers: headers }
+    );
   }
   //http://localhost:8282/users/adduser
 }
