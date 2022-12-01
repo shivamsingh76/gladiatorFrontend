@@ -13,7 +13,7 @@ export class RetailerloginComponent implements OnInit {
 
 
   retailerLoginForm:any;
-  //invalid retailerLoginForm: false;
+  invalidRetailerLogin = false 
 
   constructor(private retailerSer: RetailerService, private fb: FormBuilder){ }
 
@@ -28,8 +28,16 @@ export class RetailerloginComponent implements OnInit {
 
   onSubmit() {
 
-    this.retailerSer.doRetailerLogin(this.retailerLoginForm.value).subscribe((data) => {console.log(data)});
+    this.retailerSer.doRetailerLogin(this.retailerLoginForm.value).subscribe(data => {
+      console.log(data)
+      this.invalidRetailerLogin = false
+    },
+    error =>{
+      this.invalidRetailerLogin = true
+      alert('invalid username or password');
+    }
+    );
 
-  }
+    }
 
 }

@@ -1,0 +1,66 @@
+<p>create-update-request works!</p>
+
+<!-- <div class="container">
+    <div class='table-responsive'>
+         <table class="table table-striped">
+             <thead>
+                 <tr>
+                     <th>productId</th>
+                     <th>productName</th>
+                     <th>productImage</th>
+                     <th>productDesc</th>
+                     <th>productPrice</th>
+                     <th>productBrand</th>
+                     <th>productQty</th>
+                     <th>categoryId</th>
+                     <th>retailerId</th>
+                 </tr>
+             </thead>
+             <tbody>
+              <tr *ngFor="let p of myProductList;">
+                     <td>{{p.productId}}</td>
+                    <td>{{p.productName}}</td>
+                     <td>{{p.productImage}}</td>
+                     <td>{{p.productDesc}}</td>
+                     <td>{{p.productPrice}}</td>
+                     <td>{{p.productBrand}}</td>
+                     <td>{{p.productQty}}</td>
+                     <td>{{p.categoryId}}</td>
+                     <td>{{p.retailerId}}</td>
+
+                     <button type="submit" (click)="getCreateUpdateRequest()">update</button>
+
+             </tr> 
+             </tbody>
+         </table>
+     </div>
+
+</div> -->
+
+<form [formGroup]="myProductForm">
+
+    <label for="productId">Product Id: </label>
+    <input id="productId" type="text" formControlName="productId"> <br>
+  
+    <label for="productName">Product Name: </label>
+    <input id="productName" type="text" formControlName="productName"> <br>
+  
+    <!-- <label for="productImage">Product Image: </label> -->
+    <!-- <input id="productImage" type="text" formControlName="productImage"> <br> -->
+
+    <!-- <label for="productDesc">Product Desc: </label> -->
+    <!-- <input id="productDesc" type="text" formControlName="productDesc"> <br> -->
+
+    <label for="productPrice">Product Price: </label>
+    <input id="productPrice" type="text" formControlName="productPrice"> <br>
+
+    <!-- <label for="productBrand">Product Brand: </label> -->
+    <!-- <input id="productBrand" type="text" formControlName="productBrand"> <br> -->
+
+    <!-- <label for="productQty">Product Qty: </label> -->
+    <!-- <input id="productQty" type="text" formControlName="productQty"> <br> -->
+    <button type="submit" (click)="getCreateUpdateRequest()">update</button>
+
+    
+</form>
+
