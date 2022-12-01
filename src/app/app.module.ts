@@ -1,14 +1,18 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-
+import { ShowAllCategoryComponent } from './Category/show-all-category/show-all-category.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-import { ShowallproductsComponent } from './Products/showallproducts/showallproducts.component';
-import { ProductbynameComponent } from './Products/productbyname/productbyname.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { UserLoginComponent } from './Login/user-login/user-login.component';
+import { UserRegisterComponent } from './Register/user-register/user-register.component';
+import { HttpClientModule } from '@angular/common/http'; // add this import
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { RetailerloginComponent } from './Login/retailerlogin/retailerlogin.component';
+import { OrderComponent } from './Order/order.component';
+import { RetailerComponent } from './Retailer/retailer.component';
+import { AdminLoginComponent } from './Login/admin-login/admin-login.component';
+import { AddRetailerComponent } from './Admin/add-retailer/add-retailer.component';
+import { AddProductComponent } from './Admin/add-product/add-product.component';
 
 @NgModule({
   declarations: [
@@ -22,8 +26,6 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
 
-    
-
     AppRoutingModule,
 
     FormsModule,
@@ -31,6 +33,15 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
 
     HttpClientModule
+    ShowAllCategoryComponent,
+    UserLoginComponent,
+    UserRegisterComponent,
+    RetailerloginComponent,
+    RetailerComponent,
+    OrderComponent,
+    AdminLoginComponent,
+    AddRetailerComponent,
+    AddProductComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

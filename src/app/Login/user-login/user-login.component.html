@@ -1,0 +1,14 @@
+<p>user-login works!</p>
+
+<div>
+    <form [formGroup]="userLoginForm" (ngSubmit)="onSubmit()">
+      <label for="email">User Email: </label>
+      <input id="email" type="text" formControlName="email" /> <br />
+
+      <label for="password">User Password: </label>
+      <input id="password" type="text" formControlName="password" /> <br />
+
+      <button type="submit">Login</button> <br />
+
+    </form>
+  </div>
