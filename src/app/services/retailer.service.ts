@@ -1,32 +1,22 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { login } from '../Login/login';
+import { Login } from '../Login/Login';
 import { Retailer } from '../Retailer/Retailer';
 
-
-
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class RetailerService {
+  baseUrl: string = 'http://localhost:8282/retailers';
 
+  constructor(private httpService: HttpClient) {}
 
-  baseUrl:string="http://localhost:8282/retailers";
-
-
-
-  constructor(private httpService:HttpClient) { }
-
-
-  public doRetailerLogin(login:login):Observable<any> {
-    
-    return this.httpService.get<Retailer>(this.baseUrl+'/login/'+login.email+"/"+login.password);
-
+  public doRetailerLogin(login: Login): Observable<any> {
+    return this.httpService.get<Retailer>(
+      this.baseUrl + '/login/' + login.email + '/' + login.password
+    );
   }
-
-
-
 
   // public getMyProduct(){
 
@@ -37,6 +27,4 @@ export class RetailerService {
   // public createUpdateRequest(){
   //   return this.httpService.post<boolean>(this.baseUrl+'/updaterequest/'+product.productId);
   // }
-
-
 }
