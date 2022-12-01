@@ -4,5 +4,6 @@ export class Retailer {
     retailerEmail:string="";
     retailerMobile:string="";
     retailerPassword:string="";
+  static retailerId: string;
 
 }

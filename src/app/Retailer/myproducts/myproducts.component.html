@@ -1,0 +1,35 @@
+<p>myproducts works!</p>
+
+<div class="container">
+    <div class='table-responsive'>
+         <table class="table table-striped">
+             <thead>
+                 <tr>
+                     <th>productId</th>
+                     <th>productName</th>
+                     <th>productImage</th>
+                     <th>productDesc</th>
+                     <th>productPrice</th>
+                     <th>productBrand</th>
+                     <th>productQty</th>
+                     <th>categoryId</th>
+                     <th>retailerId</th>
+                 </tr>
+             </thead>
+             <tbody>
+              <tr *ngFor="let p of myProductList;">
+                     <td>{{p.productId}}</td>
+                    <td>{{p.productName}}</td>
+                     <td>{{p.productImage}}</td>
+                     <td>{{p.productDesc}}</td>
+                     <td>{{p.productPrice}}</td>
+                     <td>{{p.productBrand}}</td>
+                     <td>{{p.productQty}}</td>
+                     <td>{{p.categoryId}}</td>
+                     <td>{{p.retailerId}}</td>
+             </tr> 
+             </tbody>
+         </table>
+     </div>
+
+</div>
